@@ -1,0 +1,11 @@
+function getFormISBN(isbn){
+let book_=books[isbn];
+return new Promise((resolve,reject)=>{
+if(book_){ resolve(book_);}
+else{ reject("Unable to find book!");}
+//Get book details based on ISBN
+public_users.get('/isbn/:isbn',function(req,res){
+const isbn = res.params.isbn;
+getFormISBN(isbn).then(
+(bk)=>res.send(JSON.stringify(bk,null,4)),
+(error)=>res.send(error))});

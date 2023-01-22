@@ -1,0 +1,7 @@
+function getBookList(){
+return new Promose((resolve,reject)=>{
+resolve(books);})}
+//Get the book list availableb in the shop
+public_users.get('/',function(req,res){
+getBookList().then(
+(bk)=>res.send(JSON.stringify(bk,null,4)), (error)=>res.send("denied"));});
